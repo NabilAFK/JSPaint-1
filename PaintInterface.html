@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="PaintStyle.css">
+        <script src="PaintCode.js"> </script>
+        <title> JSPaint </title> 
+
+    </head>
+    <body>
+        <h1>Express yourself here</h1>
+        <p>Set Width</p> <input type="text" onchange="setWidth(this.value)" placeholder="For example, 300." />
+        <p>Set Height</p> <input type="text" onchange="setHeight(this.value)" placeholder="For example, 400." />
+        
+        <hr>
+
+        <canvas id="canvas1" onmousedown="startPaint()" onmousemove="doPaint(event.offsetX, event.offsetY)" onmouseup="endPaint()"> </canvas>
+
+
+
+
+
+    </body>
+    
+</html>
