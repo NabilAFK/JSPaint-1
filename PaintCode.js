@@ -1,7 +1,7 @@
 var paintcanvas = document.getElementById("canvas1");
 var context = paintcanvas.getContext("2d");
 var color = 'black';
-var radius = 50;
+var radius = 25;
 var isPainting = false;
 
 
@@ -29,6 +29,15 @@ function startPaint(){
 
 function endPaint(){
     isPainting = false;
+}
+
+function resizeBrush(newSize){
+    radius = newSize;
+    document.getElementById("sizeOutput").value = newSize;
+}
+
+function changeColor (newColor){
+    color = newColor;
 }
 
 function clearCanvas () {

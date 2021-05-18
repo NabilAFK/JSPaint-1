@@ -6,12 +6,22 @@
     </head>
     <body>
         <h1>Express yourself here</h1>
-        <p>Set Width</p> <input type="text" onchange="setWidth(this.value)" placeholder="For example, 300." />
-        <p>Set Height</p> <input type="text" onchange="setHeight(this.value)" placeholder="For example, 400." />
+        <p>Set Width</p> <input type="text" onchange="setWidth(this.value)" placeholder="For example, 1000." />
+        <p>Set Height</p> <input type="text" onchange="setHeight(this.value)" placeholder="For example, 600." />
         
         <hr>
 
         <canvas id="canvas1" onmousedown="startPaint()" onmousemove="doPaint(event.offsetX, event.offsetY)" onmouseup="endPaint()"> </canvas>
+        
+        <hr>
+
+        <p>Brush Color: <input type="color" value="#000" onchange="changeColor(this.value)"/> </p>
+        <p>Brush Size: <input id="sizeInput" type="range" min="1" max="50" value="25" oninput="resizeBrush(this.value)" /> 
+        <output id="sizeOutput">25</output> </p>
+       
+        <hr>
+
+        <p><input id="clear" type="button" value="Clear Canvas" onclick="clearCanvas()"/>  </p>
 
 
         <script src="PaintCode.js"> </script>
